@@ -6,7 +6,7 @@ const HomePage = () => {
         <div className="homepage-container text-center mt-5">
             <h1>Benvenuto!</h1>
             <p className="text-dark-emphasis">
-                Cerca un film nella sezione "lista film"
+                Cerca un film dalla sezione "lista film"
             </p>
         </div>
     )

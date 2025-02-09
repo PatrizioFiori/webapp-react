@@ -16,8 +16,6 @@ const GlobalProvider = ({ children }) => {
             .catch((err) => console.log("Errore nel fetch dei film", err))
     }
 
-    useEffect(fetchMovies, [])
-
     const value = {
         listaFilm,
         setListaFilm,
@@ -33,4 +31,4 @@ const GlobalProvider = ({ children }) => {
 
 const useGlobalContext = () => useContext(GlobalContext)
 
-export { GlobalContext, GlobalProvider }
+export { useGlobalContext, GlobalProvider }

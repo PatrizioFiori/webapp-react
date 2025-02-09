@@ -1,5 +1,5 @@
 
-const Card = () => {
+const Card = ({ item }) => {
     return (
         <div>Card</div>
     )

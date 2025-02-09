@@ -12,3 +12,67 @@
   justify-content: center;
   align-items: center;
 }
+
+.container-movies-details {
+  height: 100vh;
+  /* Altezza al 100% della finestra */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.movies-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.movies-id {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.movie-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #444;
+  margin: 10px 0;
+}
+
+.movie-abstract {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: #888;
+}

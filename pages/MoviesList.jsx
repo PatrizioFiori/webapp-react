@@ -5,7 +5,7 @@ import Card from "../components/Card"
 
 const MoviesList = () => {
 
-    const { listaFilm, setListaFilm, fetchMovies } = useGlobalContext()
+    const { listaFilm, fetchMovies } = useGlobalContext()
 
     useEffect(() => {
         fetchMovies()

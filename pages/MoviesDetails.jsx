@@ -13,7 +13,6 @@ const MoviesDetails = () => {
         fetchMoviesForId(id);
     }, [id, fetchMoviesForId]);
 
-
     const navigate = useNavigate()
 
     return (

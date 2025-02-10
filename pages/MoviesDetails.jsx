@@ -33,7 +33,9 @@ const MoviesDetails = () => {
                             <p>{movieDetails.release_year}</p>
                             <p className="movie-abstract">{movieDetails.abstract}</p>
                             <div>
-                                <button onClick={() => navigate("/movies")} className="btn border text-bg-primary" >Torna alla lista</button>
+                                <a className="btn border text-bg-warning" href=""><i class="fa-solid fa-arrow-left"></i></a>
+                                <button onClick={() => navigate("/movies")} className="btn border text-bg-primary mx-2" >Torna alla lista</button>
+                                <a className="btn border text-bg-warning" href=""><i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                         <Recensioni recensioni={movieDetails.reviews} />

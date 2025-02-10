@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context/GlobalContext";
-import Recensioni from "../components/recensioni"
+import Recensioni from "../components/Recensioni"
 import { useNavigate } from "react-router-dom";
+import FormRecensioni from "../components/FormRecensioni";
 
 const MoviesDetails = () => {
     const { id } = useParams();
@@ -39,10 +40,12 @@ const MoviesDetails = () => {
                             </div>
                         </div>
                         <Recensioni recensioni={movieDetails.reviews} />
+                        <FormRecensioni movie_id={id} />
                     </>
                 ) : (
                     <p>Caricamento in corso...</p>
                 )}
+
             </div>
         </>
     );

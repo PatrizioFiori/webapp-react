@@ -21,4 +21,11 @@
 
 ### Bonus
 - Stampare le stelline del voto utilizzando un componente dedicato
-- Gestire l’errore 404 in caso di libro non presente reindirizzando alla pagina 404
+- Gestire l’errore 404 in caso di libro non presente reindirizzando alla pagina 404 
+
+# webapp-react-aggiunta-form
+Aggiungere l’API che gestisce l’aggiunta di una nuova recensione e, sul front end nella pagina di dettaglio, il form che invia in post la nuova recensione.
+
+### BONUS
+validazione del form prima dell’invio con eventuale messaggio di errore
+Buon lavoro!

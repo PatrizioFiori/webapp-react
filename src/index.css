@@ -102,3 +102,7 @@
 .logo:hover {
   cursor: pointer;
 }
+
+.movie-cover:hover {
+  cursor: pointer;
+}

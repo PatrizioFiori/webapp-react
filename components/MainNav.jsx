@@ -8,7 +8,7 @@ const MainNav = () => {
         <div className="container-fluid text-bg-dark p-2">
             <div className="container d-flex justify-content-between align-items-center">
                 <div className="logo-container">
-                    <img className="logo" src="../public/Amazon_Prime_Video_logo.svg" alt="prime-img"
+                    <img className="logo" src="../Amazon_Prime_Video_logo.svg" alt="prime-img"
                         onClick={() => navigate("/")}
                     />
                 </div>

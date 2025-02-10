@@ -16,7 +16,7 @@ const Card = ({ item }) => {
                 onClick={() => navigate(`/movies/${item.id}`)}
             />
             <div>
-                <h5>{item.title}</h5>
+                <h5 className="pt-2">{item.title}</h5>
                 <p>{item.abstract}</p>
                 <a className="btn border text-bg-primary" href={`/movies/${item.id}`} >Details</a>
             </div>

@@ -98,3 +98,7 @@
   padding-bottom: 5px;
   width: 25%;
 }
+
+.logo:hover {
+  cursor: pointer;
+}

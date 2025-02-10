@@ -9,9 +9,7 @@ const Recensioni = ({ recensioni }) => {
                     recensioni.map((recensione) => (
                         <div key={recensione.id} className="">
                             <h3>{recensione.name}</h3>
-                            <p>
-                                <Star vote={recensione.vote} />
-                            </p>
+                            <Star vote={recensione.vote} />
                             <p>{recensione.text}</p>
                         </div>
                     ))

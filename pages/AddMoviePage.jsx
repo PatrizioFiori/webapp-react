@@ -1,7 +1,13 @@
 import { useState } from "react";
-import { data } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const AddMoviePage = () => {
+
+    const api_url = import.meta.env.VITE_API_URL;
+    const navigate = useNavigate()
+
     const initialData = {
         title: "",
         director: "",
@@ -27,10 +33,14 @@ const AddMoviePage = () => {
         e.preventDefault();
 
         const dataToSend = new FormData();
-        console.log(dataToSend);
         for (let key in formData) {
             dataToSend.append(key, formData[key])
         }
+        axios.post(api_url, dataToSend, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+        })
+            .then(() => navigate("/movies"))
+            .catch((err) => console.log(err))
     };
 
     return (

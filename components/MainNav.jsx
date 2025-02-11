@@ -13,8 +13,9 @@ const MainNav = () => {
                     />
                 </div>
                 <nav className="navbar-btn py-2">
-                    <a className="btn text-white border mx-3" href="/">Home</a>
-                    <a className="btn text-white border" href="/movies">Lista film</a>
+                    <a className="btn text-white border" href="/">Home</a>
+                    <a className="btn text-white border mx-3" href="/movies">Lista film</a>
+                    <a className="btn text-white border" href="/movies/add">Add movie</a>
                 </nav>
             </div>
 

@@ -1,34 +1,36 @@
-import { useState } from "react"
-
+import { useState } from "react";
 
 const AddMoviePage = () => {
-
     const initialData = {
         title: "",
         director: "",
         abstract: "",
         genre: "",
         image: null
+    };
 
+    const [formData, setFormData] = useState(initialData);
 
+    const handleSetValue = (e) => {
+        const { name, value, type } = e.target;
 
-    }
-    const [formData, setFormData] = useState(initialData)
+        if (type === "file") {
+            setFormData((prev) => ({ ...prev, image: e.target.files[0] }));
 
-    const handlSetValue = (e) => {
-        setFormData(e.target.value)
-    }
+        } else {
+            setFormData((prev) => ({ ...prev, [name]: value }));
+        }
+    };
 
-
-    const handlSubmit = (e) => {
-        e.preventDefault()
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+    };
 
     return (
-
         <div className="container">
             <div className="card">
-                <form action="#" onSubmit={handlSubmit}>
+                <form action="#" onSubmit={handleSubmit}>
                     <div className="card-header">
                         <h1>Aggiungi un nuovo film</h1>
                     </div>
@@ -41,7 +43,7 @@ const AddMoviePage = () => {
                                 name="title"
                                 placeholder="Inserisci un titolo"
                                 value={formData.title}
-                                onChange={handlSetValue}
+                                onChange={handleSetValue}
                             />
                         </div>
                         <div className="form-group">
@@ -52,7 +54,7 @@ const AddMoviePage = () => {
                                 name="director"
                                 placeholder="Inserisci chi ha diretto il film"
                                 value={formData.director}
-                                onChange={handlSetValue}
+                                onChange={handleSetValue}
                             />
                         </div>
                         <div className="form-group">
@@ -60,21 +62,20 @@ const AddMoviePage = () => {
                             <input
                                 className="form-control my-3"
                                 type="text"
-                                name="genere"
+                                name="genre"
                                 placeholder="Inserisci il genere"
                                 value={formData.genre}
-                                onChange={handlSetValue}
+                                onChange={handleSetValue}
                             />
                         </div>
                         <div className="form-group">
                             <label>Abstract</label>
                             <textarea
                                 className="form-control my-3"
-                                type="text"
-                                name="director"
+                                name="abstract"
                                 placeholder="Inserisci una breve descrizione del film"
                                 value={formData.abstract}
-                                onChange={handlSetValue}
+                                onChange={handleSetValue}
                             />
                         </div>
                         <div className="form-group">
@@ -83,19 +84,20 @@ const AddMoviePage = () => {
                                 className="form-control my-3"
                                 type="file"
                                 name="image"
-                                value={formData.image}
-                                onChange={handlSetValue}
+                                accept="image/*"
+                                onChange={handleSetValue}
                             />
                         </div>
-
                     </div>
                     <div className="d-flex justify-content-end pb-4 px-4">
-                        <button className="btn btn-primary" type="submit">Add</button>
+                        <button className="btn btn-primary" type="submit">
+                            Aggiungi
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default AddMoviePage
+export default AddMoviePage;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { data } from "react-router-dom";
 
 const AddMoviePage = () => {
     const initialData = {
@@ -24,11 +25,16 @@ const AddMoviePage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        const dataToSend = new FormData();
+        console.log(dataToSend);
+        for (let key in formData) {
+            dataToSend.append(key, formData[key])
+        }
     };
 
     return (
-        <div className="container">
+        <div className="container py-5">
             <div className="card">
                 <form action="#" onSubmit={handleSubmit}>
                     <div className="card-header">
@@ -84,12 +90,14 @@ const AddMoviePage = () => {
                                 className="form-control my-3"
                                 type="file"
                                 name="image"
-                                accept="image/*"
                                 onChange={handleSetValue}
                             />
                         </div>
                     </div>
-                    <div className="d-flex justify-content-end pb-4 px-4">
+                    <div className="d-flex justify-content-between pb-4 px-4">
+                        <button className="btn btn-danger" onClick={() => setFormData(initialData)}>
+                            Elimina
+                        </button>
                         <button className="btn btn-primary" type="submit">
                             Aggiungi
                         </button>

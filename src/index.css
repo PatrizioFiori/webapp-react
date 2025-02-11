@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+.error-404-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
 .container-movies-details {
   display: flex;
   flex-direction: column;
@@ -105,4 +114,8 @@
 
 .movie-cover:hover {
   cursor: pointer;
+}
+
+.thumb {
+  width: 150px;
 }

@@ -12,7 +12,7 @@ const MainNav = () => {
                         onClick={() => navigate("/")}
                     />
                 </div>
-                <nav className="navbar-btn py-2">
+                <nav className="navbar-btn py-2 d-flex">
                     <a className="btn text-white border" href="/">Home</a>
                     <a className="btn text-white border mx-3" href="/movies">Lista film</a>
                     <a className="btn text-white border" href="/movies/add">Add movie</a>

@@ -7,7 +7,7 @@ import FormRecensioni from "../components/FormRecensioni";
 
 const MoviesDetails = () => {
     const { id } = useParams();
-    const { movieDetails, fetchMoviesForId } = useGlobalContext();
+    const { movieDetails, fetchMoviesForId, deleteMovie } = useGlobalContext();
 
     useEffect(() => {
         fetchMoviesForId(id);
@@ -36,6 +36,22 @@ const MoviesDetails = () => {
                                 <a className="btn border text-bg-warning" href=""><i class="fa-solid fa-arrow-left"></i></a>
                                 <button onClick={() => navigate("/movies")} className="btn border text-bg-primary mx-2" >Torna alla lista</button>
                                 <a className="btn border text-bg-warning" href=""><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            <div className="">
+                                <div>
+                                    <button className="btn btn-danger" onClick={() => {
+                                        if (window.confirm(`Sicuro di voler cancellare: ${movieDetails.title}?`)) {
+                                            console.log(`${movieDetails.title} Eliminato`);
+
+                                            deleteMovie(movieDetails.id, () => {
+                                                navigate("/movies");
+                                            });
+                                        }
+                                    }}>
+                                        Delete
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
                         <Recensioni recensioni={movieDetails.reviews} />

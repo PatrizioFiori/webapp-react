@@ -115,7 +115,7 @@ const AddMoviePage = () => {
                     </div>
                     <div className="d-flex justify-content-between pb-4 px-4">
                         <button className="btn btn-danger" onClick={() => {
-                            setFormData(initialData); //useState non resetta anche i campi di tipo "file" approfondire l'argomento REF
+                            setFormData(initialData);
                             setThumb(initialThumb);
 
                             if (fileInputRef.current) {
